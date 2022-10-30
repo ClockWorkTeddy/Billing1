@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FWbfnAHQefwOYRZgPU4utppbSvt9CeDSjZb/oXir1zQ=",
+  "Source": "Billing",
+  "BasePath": "_content/Billing",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

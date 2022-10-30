@@ -1,0 +1,53 @@
+List users. Empty balances.
+{
+  "name": "oleg",
+  "amount": "0"
+}
+{
+  "name": "maria",
+  "amount": "0"
+}
+{
+  "name": "boris",
+  "amount": "0"
+}
+Emission 10 coins.
+{
+  "status": "STATUS_OK"
+}
+List users. After the emission.
+{
+  "name": "oleg",
+  "amount": "1"
+}
+{
+  "name": "maria",
+  "amount": "1"
+}
+{
+  "name": "boris",
+  "amount": "8"
+}
+Move 5 coins.
+{
+  "status": "STATUS_OK"
+}
+List users. After the coins movement.
+{
+  "name": "oleg",
+  "amount": "1"
+}
+{
+  "name": "maria",
+  "amount": "6"
+}
+{
+  "name": "boris",
+  "amount": "3"
+}
+A coin with the longest history.
+{
+  "id": "2",
+  "history": "boris;maria;"
+}
+
