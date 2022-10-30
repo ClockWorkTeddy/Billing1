@@ -37,14 +37,16 @@ public class BillingService : Billing.BillingBase
             
             return Task.FromResult(new Response
             {
-                Status = Response.Types.Status.Ok
+                Status = Response.Types.Status.Ok,
+                Comment = "Emission successful"                
             });
         }
         else
         {
             return Task.FromResult(new Response
             {
-                Status = Response.Types.Status.Failed
+                Status = Response.Types.Status.Failed,
+                Comment = "Not enought coins!"
             });
         }
     }
@@ -54,23 +56,31 @@ public class BillingService : Billing.BillingBase
         User? srcUser = GetUserByName(transaction.SrcUser);
         User? dstUser = GetUserByName(transaction.DstUser);
 
-        if (srcUser != null && dstUser != null
-                            && srcUser.Amount >= transaction.Amount)
-        {
-            MakeTransaction(srcUser, dstUser, transaction.Amount);
-            
-            return Task.FromResult(new Response
+        if (srcUser != null && dstUser != null)
+            if (srcUser.Amount >= transaction.Amount)
             {
-                Status = Response.Types.Status.Ok
-            });
-        }
+                MakeTransaction(srcUser, dstUser, transaction.Amount);
+                
+                return Task.FromResult(new Response
+                {
+                    Status = Response.Types.Status.Ok,
+                    Comment = "Transaction successful"
+                });
+            }
+            else
+            {
+                return Task.FromResult(new Response
+                {
+                    Status = Response.Types.Status.Failed,
+                    Comment = "User doesn't have enough coins!"
+                });
+            }
         else
-        {
             return Task.FromResult(new Response
             {
-                Status = Response.Types.Status.Failed
+                Status = Response.Types.Status.Failed,
+                Comment = "User not found!"
             });
-        }
     }
 
     public override Task<Coin> LongestHistoryCoin(None none, 
