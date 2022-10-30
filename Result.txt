@@ -13,7 +13,8 @@ List users. Empty balances.
 }
 Emission 10 coins.
 {
-  "status": "STATUS_OK"
+  "status": "STATUS_OK",
+  "comment": "Emission successful"
 }
 List users. After the emission.
 {
@@ -30,7 +31,8 @@ List users. After the emission.
 }
 Move 5 coins.
 {
-  "status": "STATUS_OK"
+  "status": "STATUS_OK",
+  "comment": "Transaction successful"
 }
 List users. After the coins movement.
 {
@@ -50,4 +52,3 @@ A coin with the longest history.
   "id": "2",
   "history": "boris;maria;"
 }
-
