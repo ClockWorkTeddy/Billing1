@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-GRPCSERVER=localhost:5031
-PROTODIR=/home/vanka/Documents/Projects/vscode/gRPC/Billing/Billing/Protos
+GRPCSERVER=localhost:5238
+PROTODIR=../Protos
 
 echo "List users. Empty balances."
 grpcurl -import-path $PROTODIR -proto billing.proto -plaintext -d \
