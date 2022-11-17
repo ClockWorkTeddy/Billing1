@@ -1,5 +1,6 @@
 # Billing1
-Hello! Script is in Services/Script.sh file. 
+Hello! This is a gRPC cervice, that does some operation with virtual coins(emission, sending). 
+Script is in Services/Script.sh file. 
 
 Result is in file Result.txt.
 
